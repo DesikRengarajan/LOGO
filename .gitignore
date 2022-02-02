@@ -1,4 +1,5 @@
 logo/Results/
+logo/Scripts/
 __pycache__/
 *.py[cod]
 *$py.class
