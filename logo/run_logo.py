@@ -167,7 +167,7 @@ elif (args.env_num == 4):
 
 elif (args.env_num == 5):
 	args.env_name = 'Walker2d-v2'
-	args.model_path = 'Cloned_Policies/Walker2d-v2_bc_policy_test_256_50.pt'	
+	args.demo_traj_path = 'exp_traj/Walker2d-v2_rwd_2448_expert_traj_5.p'		
 	args.K_delta = 50	
 	args.sparse_val = 2.
 	env_tag = 'Sparse2'
@@ -180,7 +180,7 @@ elif (args.env_num == 5):
 	# args.seed = 1
 	args.observe = 0
 	if args.init_BC:
-		args.demo_traj_path = 'exp_traj/Walker2d-v2_rwd_2448_expert_traj_5.p'
+		args.model_path = 'Cloned_Policies/Walker2d-v2_bc_policy_test_256_50.pt'
 		args.delta_0 = 0.05
 	eval_env = gym.make(args.env_name)
 
