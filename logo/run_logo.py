@@ -85,7 +85,7 @@ args = parser.parse_args()
 nn_size = tuple(args.nn_param)
 if (args.env_num == 1):
 	args.env_name = 'Hopper-v2'
-	args.demo_traj_path = 'exp_traj/Hopper-v2_rwd_1369_expert_traj_5.p'	
+	args.demo_traj_path = 'data/Hopper-v2_data.p'	
 	args.K_delta = 50	
 	args.sparse_val = 2.
 	env_tag = 'Sparse2'
@@ -98,14 +98,14 @@ if (args.env_num == 1):
 	# args.seed = 11
 	args.observe = 0
 	if args.init_BC:
-		args.model_path = 'Cloned_Policies/Hopper-v2_bc_policy_test_256_50.pt'
+		args.model_path = 'bc_models/Hopper-v2_model.pt'
 		args.delta_0 = 0.05
 	eval_env = gym.make(args.env_name)
 
 
 elif (args.env_num == 2):
 	args.env_name = 'Hopper-v2'
-	args.demo_traj_path = 'exp_traj/Hopper-v2_rwd_1369_expert_traj_5.p'
+	args.demo_traj_path = 'data/Hopper-v2_data.p'
 	args.K_delta = 50	
 	args.sparse_val = 2.
 	env_tag = 'Censored_Sparse2'
@@ -123,7 +123,7 @@ elif (args.env_num == 2):
 
 elif (args.env_num == 3):
 	args.env_name = 'HalfCheetah-v2'
-	args.demo_traj_path = 'exp_traj/HalfCheetah-v2_rwd_2658_traj_5.p'	
+	args.demo_traj_path = 'data/HalfCheetah-v2_data.p'	
 	args.K_delta = 50	
 	args.sparse_val = 20.
 	env_tag = 'Sparse20'
@@ -137,7 +137,7 @@ elif (args.env_num == 3):
 	# args.seed = 2
 	args.observe = 0
 	if args.init_BC:
-		args.model_path = 'Cloned_Policies/HalfCheetah-v2_bc_policy_test_256_50.pt'
+		args.model_path = 'bc_models/HalfCheetah-v2_model.pt'
 		args.delta_0 = 0.05
 	eval_env = gym.make(args.env_name)
 
@@ -145,7 +145,7 @@ elif (args.env_num == 3):
 
 elif (args.env_num == 4):
 	args.env_name = 'HalfCheetah-v2'
-	args.demo_traj_path = 'exp_traj/HalfCheetah-v2_rwd_2658_traj_5.p'
+	args.demo_traj_path = 'data/HalfCheetah-v2_data.p'
 	args.K_delta = 50	
 	args.sparse_val = 20.
 	env_tag = 'Censored_Sparse20'
@@ -167,7 +167,7 @@ elif (args.env_num == 4):
 
 elif (args.env_num == 5):
 	args.env_name = 'Walker2d-v2'
-	args.demo_traj_path = 'exp_traj/Walker2d-v2_rwd_2448_expert_traj_5.p'		
+	args.demo_traj_path = 'data/Walker2d-v2_data.p'		
 	args.K_delta = 50	
 	args.sparse_val = 2.
 	env_tag = 'Sparse2'
@@ -180,7 +180,7 @@ elif (args.env_num == 5):
 	# args.seed = 1
 	args.observe = 0
 	if args.init_BC:
-		args.model_path = 'Cloned_Policies/Walker2d-v2_bc_policy_test_256_50.pt'
+		args.model_path = 'bc_models/Walker2d-v2_model.pt'
 		args.delta_0 = 0.05
 	eval_env = gym.make(args.env_name)
 
@@ -188,7 +188,7 @@ elif (args.env_num == 5):
 
 elif (args.env_num == 6):
 	args.env_name = 'Walker2d-v2'
-	args.demo_traj_path = 'exp_traj/Walker2d-v2_rwd_2448_expert_traj_5.p'
+	args.demo_traj_path = 'data/Walker2d-v2_data.p'
 	args.K_delta = 50	
 	args.sparse_val = 2.
 	env_tag = 'Censored_Sparse2'
@@ -206,7 +206,7 @@ elif (args.env_num == 6):
 
 elif (args.env_num == 7):
 	args.env_name = 'InvertedDoublePendulum-v2'
-	args.demo_traj_path = 'exp_traj/InvertedDoublePendulum-v2_rwd_340_expert_traj_5.p'	
+	args.demo_traj_path = 'data/InvertedDoublePendulum-v2_data.p'	
 	args.K_delta = 5
 	args.delay_val = 1000
 	env_tag = 'Dealy1000'
@@ -221,13 +221,13 @@ elif (args.env_num == 7):
 	# args.seed = 1
 	args.observe = 0
 	if args.init_BC:
-		args.model_path = 'Cloned_Policies/InvertedDoublePendulum-v2_bc_policy_test_32_40.pt'
+		args.model_path = 'bc_models/InvertedDoublePendulum-v2_model.pt'
 		args.delta_0 = 0.05
 	eval_env = gym.make(args.env_name)
 
 elif (args.env_num == 8):
 	args.env_name = 'InvertedDoublePendulum-v2'
-	args.demo_traj_path = 'exp_traj/InvertedDoublePendulum-v2_rwd_340_expert_traj_5.p'
+	args.demo_traj_path = 'data/InvertedDoublePendulum-v2_data.p'
 	args.K_delta = 5
 	args.delay_val = 1000
 	env_tag = 'Censored_Dealy1000'
