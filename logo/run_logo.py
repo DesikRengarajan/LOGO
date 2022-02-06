@@ -171,7 +171,7 @@ elif (args.env_num == 5):
 	args.K_delta = 50	
 	args.sparse_val = 2.
 	env_tag = 'Sparse2'
-	args.delta_0 = 0.03
+	args.delta_0 = 0.05
 	args.low_kl = 5e-7
 	args.delta = 0.95
 	args.min_batch_size = 20000
