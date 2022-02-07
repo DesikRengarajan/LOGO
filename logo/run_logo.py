@@ -16,7 +16,6 @@ from models.mlp_critic import Value
 from models.mlp_policy_disc import DiscretePolicy
 from models.mlp_discriminator import Discriminator
 from torch import nn
-from core.ppo import ppo_step
 from core.trpo import trpo_step
 from core.common import estimate_advantages
 from core.agent import Agent
@@ -95,7 +94,7 @@ if (args.env_num == 1):
 	args.min_batch_size = 20000
 	print("Sparse Hopper with sparsity: ",args.sparse_val)
 	env = SparseHopperEnv(args.sparse_val)
-	# args.seed = 11
+	args.seed = 11
 	args.observe = 0
 	if args.init_BC:
 		args.model_path = 'bc_models/Hopper-v2_model.pt'
@@ -115,7 +114,7 @@ elif (args.env_num == 2):
 	args.min_batch_size = 20000
 	print("Sparse Hopper with sparsity: ",args.sparse_val)
 	env = SparseHopperEnv(args.sparse_val)
-	# args.seed = 1
+	args.seed = 5
 	args.observe = 7	
 	if args.init_BC:
 		print('Cannot initialzie BC due to censored data, running with random initialization')
@@ -134,7 +133,7 @@ elif (args.env_num == 3):
 	print("Sparse HalfCheetah with sparsity: ",args.sparse_val)
 	env = SparseHalfCheetahEnv(args.sparse_val)
 	args.max_iter_num = 2500
-	# args.seed = 2
+	args.seed = 1
 	args.observe = 0
 	if args.init_BC:
 		args.model_path = 'bc_models/HalfCheetah-v2_model.pt'
@@ -156,7 +155,7 @@ elif (args.env_num == 4):
 	args.max_iter_num = 2500
 	print("Sparse HalfCheetah with sparsity: ",args.sparse_val)
 	env = SparseHalfCheetahEnv(args.sparse_val)
-	# args.seed = 1
+	args.seed = 1
 	args.observe = 14	
 	if args.init_BC:
 		print('Cannot initialzie BC due to censored data, running with random initialization')
@@ -177,7 +176,7 @@ elif (args.env_num == 5):
 	args.min_batch_size = 20000
 	print("Sparse Walker with sparsity: ",args.sparse_val)
 	env = SparseWalker2dEnv(args.sparse_val)
-	# args.seed = 1
+	args.seed = 11
 	args.observe = 0
 	if args.init_BC:
 		args.model_path = 'bc_models/Walker2d-v2_model.pt'
@@ -198,7 +197,7 @@ elif (args.env_num == 6):
 	args.min_batch_size = 20000
 	print("Sparse Walker with sparsity: ",args.sparse_val)
 	env = SparseWalker2dEnv(args.sparse_val)
-	# args.seed = 1
+	args.seed = 1
 	args.observe = 10	
 	if args.init_BC:
 		print('Cannot initialzie BC due to censored data, running with random initialization')
@@ -218,7 +217,7 @@ elif (args.env_num == 7):
 	print("Delayed IDP with sparsity: ",args.delay_val)
 	env = gym.make(args.env_name)
 	env = DelayRewardWrapper(env, args.delay_val, 1000)
-	# args.seed = 1
+	args.seed = 1
 	args.observe = 0
 	if args.init_BC:
 		args.model_path = 'bc_models/InvertedDoublePendulum-v2_model.pt'
@@ -239,7 +238,7 @@ elif (args.env_num == 8):
 	print("Delayed IDP with sparsity: ",args.delay_val)
 	env = gym.make(args.env_name)
 	env = DelayRewardWrapper(env, args.delay_val, 1000)
-	# args.seed = 1
+	args.seed = 1
 	args.observe = 7	
 	if args.init_BC:
 		print('Cannot initialzie BC due to censored data, running with random initialization')
