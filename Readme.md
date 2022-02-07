@@ -1,5 +1,5 @@
 # **Reinforcement Learning with Sparse Rewards using Guidance from Offline Demonstration**
-Code for _Reinforcement Learning with Sparse Rewards using Guidance from Offline Demonstration, ICLR 2022_
+Code for _Reinforcement Learning with Sparse Rewards using Guidance from Offline Demonstration, ICLR 2022 (Spotlight)_
 
 [Video of TurtleBot Demonstration](https://www.youtube.com/watch?v=6WKfggS5gSM)
 
