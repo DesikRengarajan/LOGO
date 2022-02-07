@@ -3,6 +3,7 @@ Code for _Reinforcement Learning with Sparse Rewards using Guidance from Offline
 
 [Video of TurtleBot Demonstration](https://www.youtube.com/watch?v=6WKfggS5gSM)
 
+
 This codebase is based on a publicly available github repository [Khrylx/PyTorch-RL](https://github.com/Khrylx/PyTorch-RL)
 
 To run experiments, you will need to install the following packages preferably in a conda virtual environment 
