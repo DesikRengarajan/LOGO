@@ -176,7 +176,7 @@ elif (args.env_num == 5):
 	args.min_batch_size = 20000
 	print("Sparse Walker with sparsity: ",args.sparse_val)
 	env = SparseWalker2dEnv(args.sparse_val)
-	args.seed = 11
+	args.seed = 1
 	args.observe = 0
 	if args.init_BC:
 		args.model_path = 'bc_models/Walker2d-v2_model.pt'
